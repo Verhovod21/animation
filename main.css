@@ -1,0 +1,162 @@
+.main {
+  display: flex;
+  width: 1400px;
+ position: relative;
+  align-items: center;
+  margin: 400px 30px 0 0;
+  box-sizing: border-box;
+}
+
+.main__card {
+  position: absolute;
+  width: 280px;
+  height: 400px;
+  border-radius: 20px;
+  margin: 5px;
+  transform-style: preserve-3d;
+}
+.main__card._delay1 {
+   animation-delay: -3s;
+}
+.main__card._delay2 {
+   animation-delay: -6s;
+}
+.main__card._delay3 {
+   animation-delay: -9s;
+}
+.main__card._delay4 {
+   animation-delay: -12s;
+}
+.main__card._delay5 {
+   animation-delay: -15s;
+}
+.main__card._delay6 {
+   animation-delay: -18s;
+}
+
+._traffic {
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-name: trafic;
+  animation-timing-function: linear;
+}
+.main:hover ._traffic {
+    animation-play-state: paused;
+}
+.card__face {
+  background: red;
+  border-radius: 20px;
+  width: 280px;
+  height: 100%;
+  animation-name: trafic;
+  box-shadow: 2px 78px 31px -4px rgba(34, 60, 80, 0.2);
+}
+.card__face._dama {
+  background: url("./dama.png")  no-repeat;
+  background-size: 100%;
+  
+}
+.card__face._black {
+  background: url("./dama_black.png") center no-repeat;
+  background-size: cover;
+}
+
+.card__face._king {
+  background: url("./king.png") center no-repeat;
+  background-size:  cover;
+}
+.card__face._tuz {
+  background: url("./tuz.png") no-repeat;
+  background-size:  contain;
+}
+
+.card__back {
+  backface-visibility: hidden;
+  position: absolute; 
+  top: 0; 
+  bottom: 0;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  background: url("./back.png");
+  width: 280px;
+  height: 100%;
+  animation-name: trafic;
+}
+ @keyframes trafic {
+  0% {  
+      transform: translateX(0) rotateY(-90deg);
+      transition: all 0.2s;
+   
+      z-index: 3;
+    }
+  10% {  
+      transform: translateX(250px) rotateY(-140deg);
+      transition: all 0.2s;
+    
+      z-index: 3;
+    }
+  20% {  
+      transform: translateX(550px) rotateY(-180deg);
+      transition: all 0.2s;
+     
+      z-index: 3;
+    }
+ 
+  30% {  
+      transform: translateX(850px) rotateY(-180deg);
+      transition: all 0.6s;
+ 
+      z-index: 3;
+    }
+
+  40% {  
+      transform: translateX(1200px) rotateY(-140deg);
+      transition: all 0.6s;
+      
+      z-index: 3;
+    }
+
+  50% { 
+      transform: translateX(1300px) rotateY(-90deg); 
+      transition: all 0.6s;
+      z-index: 3;
+      height: 370px;
+      }
+
+  60% {
+      transform: translateX(1000px) rotateY(-45deg); 
+      transition: all 0.6s;
+      height: 370px;
+      width: 200px;
+      z-index: 1;
+      }
+  70% {  
+      transform: translateX(850px) rotateY(-20deg);
+      transition: all 0.6s;
+      height: 370px;
+      width: 150px;
+      z-index: 1;
+    }
+
+  80% {  
+      transform: translateX(550px) rotateY(20deg);
+      transition: all 0.6s;
+      width: 350px;
+      height: 370px;
+      z-index: 1;
+    }
+  90% {  
+      transform: translateX(250px) rotateY(45deg);
+      transition: all 0.6s;
+      height: 370px;
+      width: 200px;
+      z-index: 1;
+    }
+  100% {  
+      transform: translateX(0) rotateY(90deg);
+      transition: all 0.6s;
+      height: 370px;
+      width: 250px;
+      z-index: 1;
+    }
+  }
